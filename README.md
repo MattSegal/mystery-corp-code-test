@@ -2,7 +2,7 @@
 
 A powerful and shadowy organisation has requested a small front-end application to keep track of their favourite TV shows. You can view the implementation [here](https://mattsegal.github.io/mystery-corp-code-test/).
 
-This application is essentially an interface for interacting with an API that is provided by [themoviedb.org](https://www.themoviedb.org/documentation/api).
+This application is essentially an interface for interacting with an API that is provided by [themoviedb.org](https://www.themoviedb.org/documentation/api). I use a static API key here - a more mature implementation would generate a [session id](https://developers.themoviedb.org/3/authentication/how-do-i-generate-a-session-id).
 
 Although the identity of our end-user is nebulous, their requirements are clear. As an end user, they would like to:
 
@@ -15,7 +15,7 @@ Although the identity of our end-user is nebulous, their requirements are clear.
 
 ### Prerequisites
 
-You will need NodeJS installed plus the `yarn` package manager.
+You will need NodeJS v11 installed plus the `yarn` package manager.
 
 ### Architecture
 
@@ -46,3 +46,15 @@ yarn test
 
 Do not directly modify anything in `public/`, except for `index.html`.
 
+containers
+
+components
+
+styles
+
+module
+global
+
+routes
+
+generic

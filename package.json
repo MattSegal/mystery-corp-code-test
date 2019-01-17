@@ -6,7 +6,8 @@
     "build": "webpack --config webpack.config.js --mode development --progress --watch",
     "lint": "prettier --list-different \"src/**/*.js\"",
     "format": "prettier --write \"src/**/*.js\"",
-    "test": "echo \"Pretend that this ran some unit tests\""
+    "test": "echo \"Pretend that this ran some unit tests\"",
+    "server": "cd public;python3 -m http.server"
   },
   "author": "Matthew Segal",
   "license": "ISC",
