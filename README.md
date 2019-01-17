@@ -9,20 +9,40 @@ Although the identity of our end-user is nebulous, their requirements are clear.
 - Search for TV shows by name, so that they can find new content to watch
 - Watch the trailer for each search result, so they can decide whether they will like it
 - Add new movies to their watch list, so that they can watch them later
-- Add movies to their favourites, so that they may trumpet their good taste to other intenet denizens
+- Add movies to their favourites, so that they may trumpet their good taste to other internet denizens
 
-### Architecture summary
+# Development
 
-TODO
+### Prerequisites
 
-### Building the code
+You will need NodeJS installed plus the `yarn` package manager.
 
-TODO
+### Architecture
 
-### Running tests
-
-TODO
-
-### Contributing new code
+Client-facing code all goes into `public`, source code lives in `src`.
 
 TODO
+
+### Tools
+
+```bash
+# Install required packages
+yarn install
+
+# Build JS/CSS assets
+yarn build
+
+# Auto-format JS
+yarn format
+
+# Check JS formatting
+yarn lint
+
+# Run unit tests
+yarn test
+```
+
+### Contributing
+
+Do not directly modify anything in `public/`, except for `index.html`.
+
