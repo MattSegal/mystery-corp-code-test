@@ -46,6 +46,8 @@ yarn test
 
 Do not directly modify anything in `public/`, except for `index.html`.
 
+state
+
 containers
 
 components
@@ -58,3 +60,14 @@ global
 routes
 
 generic
+
+how to use `yarn server`
+
+### Suggested Improvement
+
+display loading state for API requests
+add error handling for API requests
+handle expired session ID
+add support for following pagination
+genericise API calls (remove repetition from actions / reduces / api)
+be more intelligent with how you load favourites / watchlist
