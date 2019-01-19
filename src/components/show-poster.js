@@ -2,9 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 const BASE_URL = 'http://image.tmdb.org/t/p/w45'
-const url = path =>
-  path ? (BASE_URL + path) : './public/white.png'
-
+const url = path => (path ? BASE_URL + path : './public/white.png')
 
 const ShowPoster = ({ path }) => (
   <img

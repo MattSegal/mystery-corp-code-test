@@ -8,7 +8,9 @@ const FavouritesPage = ({ results, removeFavourite }) => (
     <h2 className="mb-3">Favourites</h2>
     <div>
       {results.length < 1 && (
-        <p><strong>No TV shows in your favourites.</strong></p>
+        <p>
+          <strong>No TV shows in your favourites.</strong>
+        </p>
       )}
       {results.map(show => (
         <div key={show.id} className="mb-2">
@@ -16,9 +18,7 @@ const FavouritesPage = ({ results, removeFavourite }) => (
             {show.name}
             {show.first_air_date && ` (${moment(show.first_air_date).year()})`}
           </span>
-          <span
-            onClick={() => removeFavourite(show.id)}
-          >
+          <span onClick={() => removeFavourite(show.id)}>
             <FaRegThumbsDown />
           </span>
         </div>

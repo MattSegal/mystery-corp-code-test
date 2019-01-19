@@ -8,7 +8,9 @@ const WatchlistPage = ({ results, removeWatchlist }) => (
     <h2 className="mb-3">Watch List</h2>
     <div>
       {results.length < 1 && (
-        <p><strong>No TV shows in your watchlist.</strong></p>
+        <p>
+          <strong>No TV shows in your watchlist.</strong>
+        </p>
       )}
       {results.map(show => (
         <div key={show.id} className="mb-2">
@@ -16,9 +18,7 @@ const WatchlistPage = ({ results, removeWatchlist }) => (
             {show.name}
             {show.first_air_date && ` (${moment(show.first_air_date).year()})`}
           </span>
-          <span
-            onClick={() => removeWatchlist(show.id)}
-          >
+          <span onClick={() => removeWatchlist(show.id)}>
             <FaTrashAlt />
           </span>
         </div>

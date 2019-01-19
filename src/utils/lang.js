@@ -145,7 +145,6 @@ const LANG_LOOKUP = {
   yi: 'Yiddish',
 }
 
-const lang = code =>
-  LANG_LOOKUP[code] || 'Unknown'
+const lang = code => LANG_LOOKUP[code] || 'Unknown'
 
 export default lang

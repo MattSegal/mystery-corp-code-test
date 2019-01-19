@@ -51,15 +51,21 @@ const SearchPage = ({
         )}
         {results.map(show => (
           <tr key={show.id}>
-            <th scope="row"><ShowPoster path={show.poster_path} /></th>
+            <th scope="row">
+              <ShowPoster path={show.poster_path} />
+            </th>
             <td>{show.name}</td>
-            <td>{show.first_air_date ? moment(show.first_air_date).year() : '-' }</td>
             <td>
-              {show.vote_count > 0 ?
-                `${Math.round(show.vote_average * 10)}%` :
-                '-'}
+              {show.first_air_date ? moment(show.first_air_date).year() : '-'}
             </td>
-            <td>{show.original_language ? lang(show.original_language) :  ''}</td>
+            <td>
+              {show.vote_count > 0
+                ? `${Math.round(show.vote_average * 10)}%`
+                : '-'}
+            </td>
+            <td>
+              {show.original_language ? lang(show.original_language) : ''}
+            </td>
             {watchlist.includes(show.id) ? (
               <td onClick={() => removeWatchlist(show.id)}>
                 <FaTrashAlt />
