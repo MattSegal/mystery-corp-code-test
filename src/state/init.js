@@ -16,6 +16,4 @@ export default {
     favourites: [],
     watchlist: [],
   },
-  // User controlled state
-  user: {},
 }

@@ -2,7 +2,7 @@
 
 A powerful and shadowy organisation has requested a small front-end application to keep track of their favourite TV shows. You can view the implementation [here](https://mattsegal.github.io/mystery-corp-code-test/).
 
-This application is essentially an interface for interacting with an API that is provided by [themoviedb.org](https://www.themoviedb.org/documentation/api). I use a static API key here - a more mature implementation would generate a [session id](https://developers.themoviedb.org/3/authentication/how-do-i-generate-a-session-id).
+This application is essentially an interface for interacting with an API that is provided by [themoviedb.org](https://www.themoviedb.org/documentation/api).
 
 Although the identity of our end-user is nebulous, their requirements are clear. As an end user, they would like to:
 
@@ -71,3 +71,4 @@ handle expired session ID
 add support for following pagination
 genericise API calls (remove repetition from actions / reduces / api)
 be more intelligent with how you load favourites / watchlist
+remove view layer duplication

@@ -9,11 +9,11 @@ import initialState from './init'
 
 const loggerMiddleware = createLogger()
 const middleware = applyMiddleware(thunkMiddleware, loggerMiddleware)
-// Redux state keys that are stored locally
-const persistedKeys = ['auth']
+// Store Redux state keys in localStorage.
+// This is a memory-leak in the long term, but we'll cross that bridge when we get to it.
 const enhancer = compose(
   middleware,
-  persistState(persistedKeys)
+  persistState()
 )
 const store = createStore(reducer, initialState, enhancer)
 
