@@ -4,7 +4,6 @@ import { FaTrashAlt } from 'react-icons/fa'
 
 import ShowDetails from 'components/show-details'
 
-
 const WatchlistPage = ({ results, removeWatchlist }) => (
   <div>
     <h2 className="mb-3">Watch List</h2>
@@ -15,7 +14,7 @@ const WatchlistPage = ({ results, removeWatchlist }) => (
         </p>
       )}
       {results.map(show => (
-        <ShowDetails key={show.id} {...show} >
+        <ShowDetails key={show.id} {...show}>
           <span onClick={() => removeWatchlist(show.id)}>
             <FaTrashAlt />
           </span>

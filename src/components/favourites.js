@@ -14,7 +14,7 @@ const FavouritesPage = ({ results, removeFavourite }) => (
         </p>
       )}
       {results.map(show => (
-        <ShowDetails key={show.id} {...show} >
+        <ShowDetails key={show.id} {...show}>
           <span onClick={() => removeFavourite(show.id)}>
             <FaRegThumbsDown />
           </span>

@@ -2,12 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import moment from 'moment'
 
-const ShowDetails = ({
-  name,
-  first_air_date,
-  overview,
-  children,
-}) => (
+const ShowDetails = ({ name, first_air_date, overview, children }) => (
   <div className="mb-5">
     <span className="mr-3">
       <strong>
@@ -15,12 +10,8 @@ const ShowDetails = ({
         {first_air_date && ` (${moment(first_air_date).year()})`}
       </strong>
     </span>
-    <span>
-      {children}
-    </span>
-    <div className="mt-2">
-      {overview}
-    </div>
+    <span>{children}</span>
+    <div className="mt-2">{overview}</div>
   </div>
 )
 ShowDetails.propTypes = {
