@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import moment from 'moment'
 import { FaTrashAlt } from 'react-icons/fa'
+
+import ShowDetails from 'components/show-details'
+
 
 const WatchlistPage = ({ results, removeWatchlist }) => (
   <div>
@@ -13,15 +15,11 @@ const WatchlistPage = ({ results, removeWatchlist }) => (
         </p>
       )}
       {results.map(show => (
-        <div key={show.id} className="mb-2">
-          <span className="mr-3">
-            {show.name}
-            {show.first_air_date && ` (${moment(show.first_air_date).year()})`}
-          </span>
+        <ShowDetails key={show.id} {...show} >
           <span onClick={() => removeWatchlist(show.id)}>
             <FaTrashAlt />
           </span>
-        </div>
+        </ShowDetails>
       ))}
     </div>
   </div>
